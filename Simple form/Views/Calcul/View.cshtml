@@ -1,0 +1,48 @@
+﻿@{
+    ViewBag.Title = "Suma";
+}
+
+<div class="container">
+
+    <h2>Suma</h2>
+    @using (Html.BeginForm())
+    {
+
+        <fieldset>
+            <legend>Números a sumar</legend>
+            <div class="form-group">
+                <div class="row">
+                    <div class="col-xs-4">
+                        @Html.Label("numero1", "numero 1")
+                    </div>
+                    <div class="col-xs-4">
+                        @Html.TextBox("numero1", null,
+                                  htmlAttributes: new { @class = "form-control" })
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-xs-4">
+                        @Html.Label("numero2", "numero 2")
+                    </div>
+                    <div class="col-xs-4">
+                        @Html.TextBox("numero2", null,
+                                   htmlAttributes: new { @class = "form-control" })
+                    </div>
+                </div>
+
+                <div class="row">
+                    <input type="submit" class="btn btn-primary" />
+                </div>
+
+                <div class="row">
+                    <h2>@ViewBag.Resultat</h2>
+                </div>
+
+            </div>
+        </fieldset>
+
+    }
+
+</div>
+
